@@ -1,0 +1,17 @@
+{
+    "name": "huy/media-storage",
+    "description": "media storage package",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "Huy\\MediaStorage\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "huydevct"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
