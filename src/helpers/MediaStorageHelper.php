@@ -17,7 +17,7 @@ class MediaStorageHelper
         $inter_image = ImageManager::imagick()->read($image);
         $width = $inter_image->width();
         $height = $inter_image->height();
-        $sizes = config('game.image_resize');
+        $sizes = config('app.image_resize');
         $path_save = [
             'full' => 'images/full/' . $path
         ];
@@ -79,7 +79,7 @@ class MediaStorageHelper
 //        $video = $ffmpeg->open(StorageFile::path($full_path));
         $video = $ffmpeg->open(Storage::disk('local')->path($video_tmp));
         list($width, $height) = self::getSizeVideo($video);
-        $sizes = config('game.video_resize');
+        $sizes = config('app.video_resize');
         $path_save = [
             'full' => $full_path
         ];
