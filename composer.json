@@ -1,5 +1,5 @@
 {
-    "name": "huy/media-storage",
+    "name": "huydevct/media-storage",
     "description": "media storage package",
     "type": "library",
     "autoload": {
