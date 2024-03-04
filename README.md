@@ -1,4 +1,8 @@
 ### Config App
+- add this line to service provider config/app.php
+```php
+\Huy\MediaStorage\providers\MediaStorageServiceProvider::class,
+```
 - run this command to publish config
 ```bash
 php artisan vendor:publish --tag=media_storage
