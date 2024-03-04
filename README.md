@@ -1,13 +1,13 @@
 ### Config App
-- add this config to config/app.php
-```php
-'image_resize' => [
-    'medium' => 700,
-    'small' => 550,
-    'extra_small' => 250
-],
-'video_resize' => [
-    'medium' => 500,
-    'small' => 250
-],
+- run this command to publish config
+```bash
+
+```
+- add these lines to .env
+```dotenv
+IMAGE_MEDIUM=
+IMAGE_SMALL=
+IMAGE_EXTRA_SMALL=
+VIDEO_MEDIUM=
+VIDEO_SMALL=
 ```

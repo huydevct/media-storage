@@ -13,8 +13,11 @@ class MediaStorageServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        $this->publishes([
+            __DIR__ . '/../config/media_storage.php' => config_path('media_storage.php'),
+        ], 'media_storage');
         if (!$this->app->routesAreCached()){
-            require __DIR__.'/routes/routes.php';
+            require __DIR__.'/../routes/routes.php';
         }
     }
 
@@ -25,6 +28,8 @@ class MediaStorageServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        $this->mergeConfigFrom(
+            __DIR__ . '/../config/media_storage.php', 'helper'
+        );
     }
 }
