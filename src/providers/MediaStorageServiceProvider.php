@@ -29,7 +29,7 @@ class MediaStorageServiceProvider extends ServiceProvider
     public function register()
     {
         $this->mergeConfigFrom(
-            __DIR__ . '/../config/media_storage.php', 'helper'
+            __DIR__ . '/../config/media_storage.php', 'media_storage'
         );
     }
 }
