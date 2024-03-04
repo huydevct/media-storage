@@ -16,9 +16,7 @@ class MediaStorageServiceProvider extends ServiceProvider
         $this->publishes([
             __DIR__ . '/../config/media_storage.php' => config_path('media_storage.php'),
         ], 'media_storage');
-        if (!$this->app->routesAreCached()){
-            require __DIR__.'/../routes/routes.php';
-        }
+        $this->loadRoutesFrom(__DIR__.'/../routes/routes.php');
     }
 
     /**
