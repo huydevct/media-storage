@@ -16,7 +16,7 @@ class StorageFile
 
     static function uploadImage($file)
     {
-        $image_config = config('app.image_resize');
+        $image_config = config('media_storage.image_resize');
 
         $original_name = $file->getClientOriginalName();
         $type_file = explode(".", $original_name);
@@ -52,7 +52,7 @@ class StorageFile
 
     static function uploadVideo($file)
     {
-        $video_config = config('app.video_resize');
+        $video_config = config('media_storage.video_resize');
 
         $original_name = $file->getClientOriginalName();
         $type_file = explode(".", $original_name);
