@@ -1,7 +1,8 @@
 <?php
 
-use Illuminate\Routing\Route;
+
 use Huy\MediaStorage\controllers\MediaStorageController;
+use Illuminate\Support\Facades\Route;
 
 Route::prefix('storage')->group(function (){
     Route::post('images',[MediaStorageController::class,'uploadImage'])->name('storage.images');
